@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>02_楊于青</title>
+  <style>
+    .header {
+      padding: 8px;
+      text-align: center;
+      background: rgb(60, 35, 226);
+      color: white;
+      font-size: 16px;
+    }
+
+    .footer {
+      padding: 8px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(60, 35, 226);
+      color: white;
+      text-align: center;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    body {
+      font-family: Arial;
+      font-size: 17px;
+      margin: 0px !important;
+      padding: 0px !important;
+      text-align: center;
+    }
+
+    html {
+      padding: 0px !important;
+    }
+
+
+    .tablink {
+      background-color: #555;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 20px;
+      font-weight: bold;
+      width: 25%;
+    }
+
+    .tablink:hover {
+      background-color: #777;
+    }
+
+
+    .tabcontent {
+      color: white;
+      display: none;
+      padding: 100px 20px;
+      height: 100%;
+    }
+
+    #Home {
+      background-color: rgb(35, 172, 226);
+      text-align: center;
+    }
+
+    .horse {
+      color: rgb(255, 0, 0);
+      font-weight: bold;
+      font-size: 40px;
+    }
+
+    .horse>p {
+      animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+
+    #Home>img {
+      margin: auto;
+    }
+
+    .homebutton {
+      background-color: #ff0000;
+      border: 0px;
+      border-radius: 10px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 30px;
+      width: 20%;
+      animation: twinkle 1s alternate infinite;
+
+    }
+
+    @keyframes twinkle {
+      from {
+        background: #6abec4;
+      }
+
+      to {
+        background: #3b6e99;
+      }
+    }
+
+    /* .homebutton:hover {
+      background-color: #ca0101;
+    } */
+
+    #ItemProduct {
+      background-color: rgb(35, 172, 226);
+    }
+
+    #ShopCarPage {
+      background-color: rgb(35, 172, 226);
+    }
+
+    #About {
+      background-color: rgb(35, 172, 226);
+
+    }
+
+
+
+    .column {
+      float: left;
+      width: 25%;
+      padding: 0 10px;
+    }
+
+
+    .row {
+      margin: 0 -5px;
+    }
+
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      text-align: center;
+      background-color: #3a7cbf;
+      margin-bottom: 16px;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #04aa6d;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .row {
+      display: -ms-flexbox;
+      /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap;
+      /* IE10 */
+      flex-wrap: wrap;
+      margin: 0 -16px;
+    }
+
+    .col-25 {
+      -ms-flex: 25%;
+      /* IE10 */
+      flex: 25%;
+    }
+
+    .col-50 {
+      -ms-flex: 50%;
+      /* IE10 */
+      flex: 50%;
+    }
+
+    .col-75 {
+      -ms-flex: 75%;
+      /* IE10 */
+      flex: 75%;
+    }
+
+    .col-25,
+    .col-50,
+    .col-75 {
+      padding: 0 16px;
+    }
+
+    .container {
+      background-color: rgb(131, 131, 131);
+      padding: 5px 20px 15px 20px;
+      border: 1px solid lightgrey;
+      border-radius: 3px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    label {
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .icon-container {
+      margin-bottom: 20px;
+      padding: 7px 0;
+      font-size: 24px;
+    }
+
+    .btn {
+      background-color: #04aa6d;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      width: 100%;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      color: #00447b;
+    }
+
+    hr {
+      border: 1px solid lightgrey;
+    }
+
+    span.price {
+      float: right;
+      color: grey;
+    }
+
+
+    @media (max-width: 800px) {
+      .row {
+        flex-direction: column-reverse;
+      }
+
+      .col-25 {
+        margin-bottom: 20px;
+      }
+    }
+
+    table {
+      margin: auto;
+    }
+
+    .story {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  </style>
+  <script src="./shopcar.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <h1><img src="澎湖王LOGOv2.png" /></h1>
+    <p></p>
+  </div>
+  <button class="tablink" onclick="openPage('Home', this, 'rgb(35, 172, 226)')" id="defaultOpen">
+    首頁
+  </button>
+  <button class="tablink" onclick="openPage('ItemProduct', this, 'rgb(35, 172, 226)')">
+    商品目錄
+  </button>
+  <button class="tablink" onclick="openPage('ShopCarPage', this, 'rgb(35, 172, 226)')">
+    購物車
+  </button>
+  <button class="tablink" onclick="openPage('About', this, 'rgb(35, 172, 226)')">
+    關於我們
+  </button>
+
+  <div class="tabcontent" id="Home">
+    <h1 style="font-size: 50px; color: rgb(0, 0, 0)">澎湖王</h1>
+    <div class="horse">
+      <p>海鮮直送，新鮮美味，海鮮箱多樣少量宅配到府</p>
+    </div>
+    <!-- <marquee behavior="alternate" scrollamount="10" style="color: red; font-size: 40px; font-weight: bold;"> 海鮮直送，新鮮美味，海鮮箱多樣少量宅配到府 </marquee> -->
+    <!-- <h1 style="color: rgb(255, 0, 0)">海鮮直送，新鮮美味，海鮮箱多樣少量宅配到府</h1> -->
+    <p style="font-size: 20px">
+      即食系列拆開加熱就吃！小朋友愛的干貝到下酒菜，最適合全家的生/熟海鮮都在澎湖王！
+    </p>
+    <p style="font-size: 20px">
+      露營、自煮都OK
+      吃海味好料不必上餐廳！我們提供高品質又省時的餐桌食材，吃海鮮變的超簡單。
+    </p>
+    <p style="font-size: 20px">
+      上班忙工作、下班忙小孩，妳需要更輕鬆的買菜方式：
+    </p>
+    <button class="homebutton" onclick="openPage('ItemProduct')">
+      點我看更多商品
+    </button>
+    <p style="font-size: 20px">
+      24h買菜多種食材自由選，少量多樣享受美味更便利、不分溫層最低$999免運超輕鬆、快速到貨不用等。不用人擠人
+      網路買菜超便利。
+    </p>
+    <img width="600px" height="400px" src="./picture/home-pic.jpg" alt="" />
+    <img width="600px" height="400px" src="./picture/home-pic2.jpg" alt="" />
+  </div>
+
+  <div id="ItemProduct" class="tabcontent">
+    <h1 style="font-size: 50px; color: rgb(0, 0, 0)">澎湖王商品目錄</h1>
+    <h1 style="color: rgb(255, 0, 0)">最新鮮的海產魚貨都在此</h1>
+    <p style="font-size: 20px">澎湖海鮮的海味，在悠活讓你全台買透透，急速配送到府，享用美食不耽誤。</p>
+    <p style="font-size: 20px">生鮮食材、安心又美味的加熱即食商品，帶便當原來也可以很輕鬆，加熱即食好方便。 </p>
+    <p style="font-size: 20px">健康飲食起點的首選品牌。吃的到你買不到的健康。</p>
+    <button class="homebutton" onclick="openPage('ShopCarPage')">點我去結帳</button>
+    <hr>
+    <div class="row" id="item_row"></div>
+  </div>
+
+  <div id="ShopCarPage" class="tabcontent">
+    <h1 style="font-size: 50px; color: rgb(0, 0, 0)">澎湖王購物車</h1>
+    <h1 style="color: rgb(255, 0, 0)">快速採買、新鮮到家</h1>
+    <p style="font-size: 20px">採用鮮活急速冷凍，更能保持原有的鮮甜風味及彈牙口感，絕對讓您品嘗最棒的新鮮海味！</p>
+    <p style="font-size: 20px">本商品為澎湖野生海鮮，經零下-45℃急速冷凍，獨立塑膠袋真空包裝，保持最佳鮮度。</p>
+    <div class="row">
+      <div class="col-50">
+        <div class="container">
+          <form action="/action_page.php">
+            <div class="row">
+              <div class="col-50">
+                <h3>寄送地址</h3>
+                <label for="fname"><i class="fa fa-user"></i>全名</label>
+                <input type="text" id="fname" name="firstname" placeholder="王小明" />
+                <label for="email"><i class="fa fa-envelope"></i>Email</label>
+                <input type="text" id="email" name="email" placeholder="john@example.com" />
+                <label for="usertel"><i class="fa fa-user"></i>手機號碼</label>
+                <input type="text" id="usertel" name="usertel" placeholder="0912-345678" />
+                <label for="adr"><i class="fa fa-address-card-o"></i>地址</label>
+                <input type="text" id="adr" name="address" placeholder="公益路二段51號18樓" />
+                <label for="city"><i class="fa fa-institution"></i>城市</label>
+                <input type="text" id="city" name="city" placeholder="台中市" />
+
+                <div class="row">
+                  <div class="col-50">
+                    <label for="state">地區</label>
+                    <input type="text" id="state" name="state" placeholder="南屯區" />
+                  </div>
+                  <div class="col-50">
+                    <label for="zip">郵遞區號</label>
+                    <input type="text" id="zip" name="zip" placeholder="408" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-50">
+                <h3>付款資訊</h3>
+                <label for="cname">信用卡全名</label>
+                <input type="text" id="cname" name="cardname" placeholder="王小明" />
+                <label for="ccnum">信用卡號</label>
+                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" />
+
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear">信用卡效期(年份)</label>
+                    <input type="text" id="expyear" name="expyear" placeholder="2022" />
+                  </div>
+                  <div class="col-50">
+                    <label for="exmonth">信用卡效期(月份)</label>
+                    <select id="exmonth" name="exmonth">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="5">6</option>
+                      <option value="5">7</option>
+                      <option value="5">8</option>
+                      <option value="5">9</option>
+                      <option value="5">10</option>
+                      <option value="5">11</option>
+                      <option value="5">12</option>
+                    </select>
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">信用卡安全碼CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123(卡片安全碼)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label>
+              <input type="checkbox" checked="checked" name="sameadr" />付款人同訂購人
+            </label>
+            <input type="submit" value="繼續付款" class="btn" />
+          </form>
+        </div>
+      </div>
+      <div class="col-50">
+        <div class="container" id="check_shopcar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="About" class="tabcontent">
+    <h1 style="font-size: 50px; color: rgb(0, 0, 0)">關於澎湖王</h1>
+    <h1 style="color: rgb(255, 0, 0)">澎湖王，您的好朋友</h1>
+    <!-- <img width="400px" height="600px" src="./picture/about-man.jpg" alt=""> -->
+    <table style="text-align:left">
+      <td><img width="600px" height="400px" src="./picture/about-man3.jpg" alt=""></td>
+      <td>
+        <p>
+          澎湖王創辦人從事水產養殖相關工作超過10年以上，不只學士碩士都是相關科系畢業，更熟知海鮮捕撈、養殖以及生產的過程所要面對的挑戰以及好食材的珍貴性，只要提起海鮮他絕對能與你侃侃而談，不論產地品種、烹調方式，甚至是嚐起來的味道，他總能滔滔不絕口若懸河的分享，憑藉著對海鮮的熱忱以及對嚴選食材的執著，他決定打造屬於海鮮達人的品牌澎湖王。
+          <br>
+          為什麼做『海鮮』？海鮮是每個家庭必備的食材，既健康又營養好吃，卻常常遇到不懂得挑選好的海鮮。為此澎湖王跟著漁民一同捕蝦、捕魚生產最棒且安全的海鮮食材，澎湖王更有一個願景，一個真正擁有幸福、健康、快樂的家庭生活的願景。享受親情，從餐桌上的佳餚開始～希望讓最美味的海鮮，相伴家人間的對話，一起用澎湖王的海鮮，為生活調味。
+          <br>
+          嚴選產地海鮮食材，認證食材無毒無膨發安心海鮮，從產地到餐桌過程全程把關安全健康有保障，低溫宅配，滿額免運，讓您簡單料理海鮮。烤肉、火鍋、露營、低升糖、家常菜等健康安心食材。
+          <br>
+          澎湖王累積越來越多熟客，澎湖王開始能夠花更多的時間走訪產地/經營台灣在地的海鮮食材，直接向漁船收到當季最新鮮的漁獲，從捕撈到冷凍保存到分裝配送一路嚴選把關，期許能讓更多優質的海鮮有機會出現在大家的餐桌上，同時也盡自己的一份心力來推廣台灣在地漁貨。
+          <br><br>
+          澎湖王海產有限公司
+          <br>
+          負責人：澎湖王先生
+          <br>
+          投保產品責任險字號：0123-01PDT00123
+          <br>
+          食品業者登陸字號：A-123456789-00000-1
+        </p>
+      </td>
+    </table>
+    <br><br>
+    <div class="container">
+      <form action="/action_page.php">
+        <h2>問題詢問/意見回饋</h2>
+        <label for="fname">姓名</label>
+        <input type="text" id="fname" name="firstname" placeholder="王小明" />
+
+        <label for="phNumber">手機號碼</label>
+        <input type="text" id="phNumber" name="phoneNumber" placeholder="0912-345678" />
+
+        <label for="question">相關問題</label>
+        <select id="question" name="question">
+          <option>請選擇</option>
+          <option value="webProblem">網站問題</option>
+          <option value="productProblem">產品問題</option>
+          <option value="transportProblem">貨運問題</option>
+          <option value="otherProblem">其他問題</option>
+        </select>
+
+        <label for="subject">詢問/回饋</label>
+        <textarea id="subject" name="subject" placeholder="請輸入文字" style="height: 200px"></textarea>
+
+        <input type="submit" value="提交" />
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <p>2022 ©澎湖王海產有限公司。 若接到可疑電話，請洽詢165反詐騙專線。</p>
+  </div>
+
+  <script>
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+
+    document.getElementById("defaultOpen").click();
+  </script>
+</body>
+
+</html>
