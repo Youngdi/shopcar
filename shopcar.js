@@ -146,9 +146,8 @@ function addToCar(e, id, price) {
         </span>
       <h2>
       <h2>
-        總計
         <span class="price" style="color: black">
-        <b>$${bill}</b>
+        <b>總計$${bill}</b>
         </span>
       </h2>
     </div>`;
