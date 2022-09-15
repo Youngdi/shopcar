@@ -1,7 +1,7 @@
 const ITEM = [
   {
     id: "item-grouper",
-    name: "石斑魚",
+    name: "龍膽石斑魚",
     desc: "龍膽石斑魚（200g)",
     explain:
       "龍膽石斑是非常頂級的魚種，嚴選六到八公斤的龍膽石斑，膠質及魚肉的比例最好，鮮美無腥味，Q彈口感，魚皮膠質厚實又天然。煮湯、清蒸都是最頂級料理。",
@@ -28,10 +28,10 @@ const ITEM = [
   },
   {
     id: "item-shrimp",
-    name: "草蝦",
-    desc: "草蝦 8隻（360g)",
+    name: "野生大明蝦",
+    desc: "野生大明蝦 4隻（360g)",
     explain:
-      "野生海草蝦(明蝦)因生長環境要求高、生長時間較長，所以體型碩大，肉質就是特別脆彈有嚼勁、蝦膏也豐厚濃郁，是媲美龍蝦口感的高級海蝦食材喔！",
+      "野生大明蝦因生長環境要求高、生長時間較長，所以體型碩大，肉質就是特別脆彈有嚼勁、蝦膏也豐厚濃郁，是媲美龍蝦口感的高級海蝦食材喔！",
     price: 450,
     pic: "./picture/item-shrimp.jpg",
   },
@@ -87,7 +87,7 @@ const ITEM = [
     explain:
       "又稱為喔「海中牛奶」，營養滿點，蛋白質豐富！澎湖的海養出來的蚵仔特別特別鮮甜而紮實，軟嫩肥美，貝柱彈牙，簡單加薑絲就可以煮出非常鮮美的蚵仔湯！",
     price: 100,
-    pic: "./picture/item-oyster.jpeg",
+    pic: "./picture/item-oyster.jpg",
   },
   {
     id: "item-scallops",
@@ -105,7 +105,7 @@ const ITEM = [
     explain:
       "野生七星鮑魚，每一顆都是人工採集，人工去殼後熟凍鎖住最鮮甜的滋味，每一顆都是非常的珍貴！雖然小顆但每顆都飽滿厚實，口感非常的Q彈，超鮮甜！",
     price: 320,
-    pic: "./picture/item-abalone.png",
+    pic: "./picture/item-abalone.jpg",
   },
 ];
 
