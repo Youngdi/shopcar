@@ -1,32 +1,10 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>jQuery實現購物車物品數量的加減</title>
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
+    <title>123</title>
+    
     <script>
-        $(function () {
-            var t = $("#quantity");
-            $("#add").click(function () {
-                t.val(parseInt(t.val()) + 1);
-                $("#min").removeAttr("disabled");                 //當按加1時，解除$("#min")不可讀狀態
-                setTotal();
-            })
-            $("#min").click(function () {
-                if (parseInt(t.val()) > 1) {                     //判斷數量值大於1時才可以減少
-                    t.val(parseInt(t.val()) - 1)
-                } else {
-                    $("#min").attr("disabled", "disabled")        //當$("#min")為1時，$("#min")不可讀狀態
-                }
-                setTotal();
-            })
-            function setTotal() {
-                $("#total").html((parseInt(t.val()) * 1).toFixed(2));
-            }
-            setTotal();
-        })
-
         function adder() {
             var count = document.getElementById("countCar").innerHTML;
             count = parseInt(count) + 1;
@@ -41,8 +19,6 @@
             }
             document.getElementById("countCar").innerHTML = count;
         }
-
-
     </script>
 
     <style>
@@ -85,13 +61,7 @@
 </head>
 
 <body>
-    <p>單價：1</p>
-    <input id="min" name="" type="button" value="-" />
-    <input id="quantity" name="" type="text" value="1" />
-    <input id="add" name="" type="button" value="+" />
-    <p>總價：<label id="total"></label></p>
-
-
+    
     <ul class="counter">
         <li id="plus"><input type="button" onclick="adder()" value="+" /></li>
         <li id="countCar">0</li>
