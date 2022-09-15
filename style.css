@@ -12,7 +12,7 @@
 .header {
   padding: 8px;
   text-align: center;
-  background: rgb(60, 35, 226);
+  background: rgb(58, 124, 191);
   color: white;
   font-size: 16px;
 }
@@ -22,7 +22,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(60, 35, 226);
+  background-color: rgb(58, 124, 191);
   color: white;
   text-align: center;
 }
@@ -164,7 +164,7 @@ html {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
-  background-color: #3a7cbf;
+  background-color: rgb(58, 124, 191);
   margin-bottom: 16px;
 }
 

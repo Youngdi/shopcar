@@ -131,8 +131,11 @@ function addToCar(e, id, price) {
       shopcar_detail_content +
       `
       <div class="shopcar_row">
-        <a style="color:white">${ITEM.find((i) => i.id === key).name}</a>
-        <span style="color: black" class="price">$${value.total}</span>
+        <a style="color:black">${ITEM.find((i) => i.id === key).name}</a>
+        <span style="color: black" class="price">$${value.total}
+        <button onclick="">+</button>
+        <button onclick="">-</button>
+        </span>
       </div>`;
     bill = bill + value.total;
   }
