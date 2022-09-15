@@ -108,7 +108,20 @@ const ITEM = [
     pic: "./picture/item-abalone.jpg",
   },
 ];
-
+function adder() {
+  var count = document.getElementById("countCar").innerHTML;
+  count = parseInt(count) + 1;
+  document.getElementById("countCar").innerHTML = count;
+}
+function minuser() {
+  var count = document.getElementById("countCar").innerHTML;
+  if (count <= 0) {
+    count = 0;
+  } else {
+    count = parseInt(count) - 1;
+  }
+  document.getElementById("countCar").innerHTML = count;
+}
 function addToCar(e, id, price) {
   const parent = e.parentElement.parentElement;
   const totalElm = parent.children[2];
@@ -130,6 +143,7 @@ function addToCar(e, id, price) {
   for (const [key, value] of Object.entries(window.shopcar)) {
     shopcar_detail_content =
       shopcar_detail_content +
+
       `
       <div class="shopcar_row">
         <a style="color:black; font-size: 20px">${ITEM.find((i) => i.id === key).name}</a>
@@ -144,20 +158,7 @@ function addToCar(e, id, price) {
 
     bill = bill + value.total;
   }
-  function adder() {
-    var count = document.getElementById("countCar").innerHTML;
-    count = parseInt(count) + 1;
-    document.getElementById("countCar").innerHTML = count;
-  }
-  function minuser() {
-    var count = document.getElementById("countCar").innerHTML;
-    if (count <= 0) {
-      count = 0;
-    } else {
-      count = parseInt(count) - 1;
-    }
-    document.getElementById("countCar").innerHTML = count;
-  }
+
 
 
   let shopcar_detail_footer = `<hr />
@@ -224,4 +225,7 @@ setTimeout(() => {
 }, 100);
 
 window.addToCar = addToCar;
+window.adder = adder;
+window.minuser = minuser;
+
 window.shopcar = {};
