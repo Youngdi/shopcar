@@ -28,18 +28,18 @@
         })
 
         function adder() {
-            var count = document.getElementById("countnum").innerHTML;
+            var count = document.getElementById("countCar").innerHTML;
             count = parseInt(count) + 1;
-            document.getElementById("countnum").innerHTML = count;
+            document.getElementById("countCar").innerHTML = count;
         }
         function minuser() {
-            var count = document.getElementById("countnum").innerHTML;
+            var count = document.getElementById("countCar").innerHTML;
             if (count <= 0) {
                 count = 0;
             } else {
                 count = parseInt(count) - 1;
             }
-            document.getElementById("countnum").innerHTML = count;
+            document.getElementById("countCar").innerHTML = count;
         }
 
 
@@ -93,9 +93,9 @@
 
 
     <ul class="counter">
-        <li id="minus"><input type="button" onclick="minuser()" value="-" /></li>
-        <li id="countnum">0</li>
         <li id="plus"><input type="button" onclick="adder()" value="+" /></li>
+        <li id="countCar">0</li>
+        <li id="minus"><input type="button" onclick="minuser()" value="-" /></li>
     </ul>
 </body>
 

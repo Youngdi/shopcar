@@ -121,23 +121,7 @@ function addToCar(e, id, price) {
       total: totalPrice,
     },
   };
-
-  var count = "";
-  function adder() {
-    var count = document.getElementById("check_shopcar").innerHTML;
-    count = parseInt(count) + 1;
-    document.getElementById("countCar").innerHTML = count;
-  }
-  function minUser() {
-    var count = document.getElementById("check_shopcar").innerHTML;
-    if (count <= 0) {
-      count = 0;
-    } else {
-      count = parseInt(count) - 1;
-    }
-    document.getElementById("countCar").innerHTML = count;
-  }
-
+  
   const check_shopcar = document.getElementById("check_shopcar");
   let shopcar_detail_header = `<h1><i class="fa-solid fa-cart-shopping" style="padding: 5px;"></i>購物車</h1>`;
   let shopcar_detail = "";
