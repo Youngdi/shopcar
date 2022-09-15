@@ -12,7 +12,7 @@
 .header {
   padding: 8px;
   text-align: center;
-  background: rgb(58, 124, 191);
+  background: #0C4A60;
   color: white;
   font-size: 16px;
 }
@@ -22,7 +22,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(58, 124, 191);
+  background-color: #0C4A60;
   color: white;
   text-align: center;
 }
@@ -37,14 +37,17 @@ body {
   margin: 0px !important;
   padding: 0px !important;
   text-align: center;
+  
 }
+
 
 html {
   padding: 0px !important;
+  
 }
 
 .tablink {
-  background-color: #555;
+  background-color: #EF6C33;
   color: white;
   float: left;
   border: none;
@@ -57,7 +60,7 @@ html {
 }
 
 .tablink:hover {
-  background-color: #777;
+  background-color: #0C4A60;
 }
 
 .tabcontent {
@@ -68,12 +71,12 @@ html {
 }
 
 #Home {
-  background-color: rgb(35, 172, 226);
+  background-color: #ABDFF1;
   text-align: center;
 }
 
 .horse {
-  color: rgb(255, 0, 0);
+  color: #EF6C33;
   font-weight: bold;
   font-size: 40px;
 }
@@ -97,7 +100,7 @@ html {
 }
 
 .homebutton {
-  background-color: #ff0000;
+
   border: 0px;
   border-radius: 10px;
   color: white;
@@ -112,11 +115,11 @@ html {
 
 @keyframes twinkle {
   from {
-    background: #6abec4;
+    background: #EF6C33;
   }
 
   to {
-    background: #3b6e99;
+    background: #0C4A60;
   }
 }
 
@@ -125,15 +128,15 @@ html {
   } */
 
 #ItemProduct {
-  background-color: rgb(35, 172, 226);
+  background-color: #ABDFF1;
 }
 
 #ShopCarPage {
-  background-color: rgb(35, 172, 226);
+  background-color: #ABDFF1;
 }
 
 #About {
-  background-color: rgb(35, 172, 226);
+  background-color: #ABDFF1;
 }
 
 .column {
@@ -164,7 +167,7 @@ html {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
-  background-color: rgb(58, 124, 191);
+  background-color: #0C4A60;
   margin-bottom: 16px;
 }
 
@@ -182,7 +185,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #04aa6d;
+  background-color: #EF6C33;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -191,7 +194,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #c5592b;
 }
 
 .container {
@@ -261,7 +264,7 @@ label {
 }
 
 .btn {
-  background-color: #04aa6d;
+  background-color: #EF6C33;
   color: white;
   padding: 12px;
   margin: 10px 0;
@@ -273,7 +276,7 @@ label {
 }
 
 .btn:hover {
-  background-color: #45a049;
+  background-color: #c5592b;
 }
 
 a {
@@ -281,7 +284,7 @@ a {
 }
 
 hr {
-  border: 1px solid lightgrey;
+  border: 1px solid grey;
 }
 
 span.price {

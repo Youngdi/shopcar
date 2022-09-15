@@ -131,9 +131,9 @@ function addToCar(e, id, price) {
       shopcar_detail_content +
       `
       <div class="shopcar_row">
-        <a style="color:black">${ITEM.find((i) => i.id === key).name}</a>
+        <a style="color:black">${ITEM.find((i) => i.id === key).name}x${value}</a>
         <span style="color: black" class="price">$${value.total}
-        <button onclick="">+</button>
+        <button onclick="window.shopcar">+</button>
         <button onclick="">-</button>
         </span>
       </div>`;
@@ -190,7 +190,7 @@ function generateItems() {
                     </select>
                 </td>
                 <td>0</td>
-                <td><button onclick="addToCar(this, '${i.id}', ${i.price})">＋入購物車</button></td>
+                <td><button onclick="addToCar(this, '${i.id}', ${i.price})">加入<div class="fa-solid fa-cart-shopping"></div></button></td>
             </tr>
         </table>
     </div>
