@@ -121,8 +121,25 @@ function addToCar(e, id, price) {
       total: totalPrice,
     },
   };
+
+  var count = "";
+  function adder() {
+    var count = document.getElementById("check_shopcar").innerHTML;
+    count = parseInt(count) + 1;
+    document.getElementById("countCar").innerHTML = count;
+  }
+  function minUser() {
+    var count = document.getElementById("check_shopcar").innerHTML;
+    if (count <= 0) {
+      count = 0;
+    } else {
+      count = parseInt(count) - 1;
+    }
+    document.getElementById("countCar").innerHTML = count;
+  }
+
   const check_shopcar = document.getElementById("check_shopcar");
-  let shopcar_detail_header = `<h1>購物車</h1>`;
+  let shopcar_detail_header = `<h1><i class="fa-solid fa-cart-shopping" style="padding: 5px;"></i>購物車</h1>`;
   let shopcar_detail = "";
   let shopcar_detail_content = "";
   let bill = 0;
@@ -131,21 +148,20 @@ function addToCar(e, id, price) {
       shopcar_detail_content +
       `
       <div class="shopcar_row">
-        <a style="color:black">${ITEM.find((i) => i.id === key).name}x${value}</a>
-        <span style="color: black" class="price">$${value.total}
-        <button onclick="window.shopcar">+</button>
-        <button onclick="">-</button>
+        <a style="color:black; font-size: 20px">${ITEM.find((i) => i.id === key).name}</a>
+        <span style="color: black; font-size: 20px" class="price">$${value.total} 
         </span>
       </div>`;
+
     bill = bill + value.total;
   }
+
   let shopcar_detail_footer = `<hr />
     <div class="shopcar_footer">
       <h2>
         <span class="price" style="color: black">
-        <b>共${
-          Object.keys(window.shopcar).length
-        }項</b>
+        <b>共${Object.keys(window.shopcar).length
+    }項</b>
         </span>
       <h2>
       <h2>
@@ -190,7 +206,7 @@ function generateItems() {
                     </select>
                 </td>
                 <td>0</td>
-                <td><button onclick="addToCar(this, '${i.id}', ${i.price})">加入<div class="fa-solid fa-cart-shopping"></div></button></td>
+                <td><button style="font-size: 16px" onclick="addToCar(this, '${i.id}', ${i.price})">加入<div class="fa-solid fa-cart-shopping"></div></button></td>
             </tr>
         </table>
     </div>

@@ -1,8 +1,9 @@
 .shopcar_footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .shopcar_row {
   display: flex;
   justify-content: space-between;
@@ -37,13 +38,13 @@ body {
   margin: 0px !important;
   padding: 0px !important;
   text-align: center;
-  
+
 }
 
 
 html {
   padding: 0px !important;
-  
+
 }
 
 .tablink {
@@ -81,7 +82,7 @@ html {
   font-size: 40px;
 }
 
-.horse > p {
+.horse>p {
   animation: marquee 15s linear infinite;
 }
 
@@ -95,7 +96,7 @@ html {
   }
 }
 
-#Home > img {
+#Home>img {
   margin: auto;
 }
 
@@ -284,7 +285,7 @@ a {
 }
 
 hr {
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
 }
 
 span.price {
