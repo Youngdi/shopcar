@@ -108,9 +108,10 @@ const ITEM = [
     pic: "./picture/item-abalone.jpg",
   },
 ];
+
 function adder() {
   var count = document.getElementById("countCar").innerHTML;
-  count = parseInt(count) + 1;
+  count = parseInt(count) +1;
   document.getElementById("countCar").innerHTML = count;
 }
 function minuser() {
@@ -151,7 +152,7 @@ function addToCar(e, id, price) {
       <span style="color: black; font-size: 20px" class="price">$${value.total} 
         <div><ul class="counter">
         <li id="plus"><input type="button" onclick="adder()" value="+" /></li>
-        <li id="countCar">0</li>
+        <li id="countCar">1</li>
         <li id="minus"><input type="button" onclick="minuser()" value="-" /></li>
         </ul></div><br></span>
       </div>`;
@@ -211,7 +212,11 @@ function generateItems() {
                     </select>
                 </td>
                 <td>0</td>
-                <td><button style="font-size: 16px" onclick="addToCar(this, '${i.id}', ${i.price})">加入<div class="fa-solid fa-cart-shopping"></div></button></td>
+                <td>
+                <button style="font-size: 16px" onclick="addToCar(this, '${i.id}', ${i.price})">
+                加入<div class="fa-solid fa-cart-shopping"></div>
+                </button>
+                </td>
             </tr>
         </table>
     </div>
