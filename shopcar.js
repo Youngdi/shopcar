@@ -1,3 +1,4 @@
+// 商品的品項項目
 const ITEM = [
   {
     id: "item-grouper",
@@ -123,6 +124,8 @@ const ITEM = [
 //   }
 //   document.getElementById("countCar").innerHTML = count;
 // }
+
+// 加入購物車的操作
 function addToCar(e, id, price) {
   const parent = e.parentElement.parentElement;
   const totalElm = parent.children[2];
@@ -181,7 +184,7 @@ function addToCar(e, id, price) {
     shopcar_detail_header + shopcar_detail_content + shopcar_detail_footer;
   check_shopcar.innerHTML = shopcar_detail;
 }
-
+// 項目卡片動態
 function generateItems() {
   const item_row = document.getElementById("item_row");
   let content = "";
