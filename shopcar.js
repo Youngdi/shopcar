@@ -110,20 +110,23 @@ const ITEM = [
   },
 ];
 
-// function adder() {
-//   var count = document.getElementById("countCar").innerHTML;
-//   count = parseInt(count) +1;
-//   document.getElementById("countCar").innerHTML = count;
-// }
-// function minuser() {
-//   var count = document.getElementById("countCar").innerHTML;
-//   if (count <= 0) {
-//     count = 0;
-//   } else {
-//     count = parseInt(count) - 1;
-//   }
-//   document.getElementById("countCar").innerHTML = count;
-// }
+function adder() {
+  var count = document.getElementById("countCar").innerHTML;
+  count = parseInt(count) +1;
+  document.getElementById("countCar").innerHTML = count;
+
+  console.log();
+  
+}
+function minuser() {
+  var count = document.getElementById("countCar").innerHTML;
+  if (count <= 0) {
+    count = 0;
+  } else {
+    count = parseInt(count) - 1;
+  }
+  document.getElementById("countCar").innerHTML = count;
+}
 
 // 加入購物車的操作
 function addToCar(e, id, price) {
@@ -153,14 +156,14 @@ function addToCar(e, id, price) {
         <a style="color:black; font-size: 20px">${ITEM.find((i) => i.id === key).name}</a>
         
       <span style="color: black; font-size: 20px" class="price">$${value.total} 
-        </span>
+          <div><ul class="counter">
+      <li id="plus"><input type="button" onclick="adder()" value="+" /></li>
+      <li id="countCar">1</li>
+      <li id="minus"><input type="button" onclick="minuser()" value="-" /></li>
+      </ul></div><br></br></span>
       </div>`;
 
-    // <div><ul class="counter">
-    //   <li id="plus"><input type="button" onclick="adder()" value="+" /></li>
-    //   <li id="countCar">1</li>
-    //   <li id="minus"><input type="button" onclick="minuser()" value="-" /></li>
-    //   </ul></div><br></br>
+
     bill = bill + value.total;
   }
 
@@ -234,7 +237,7 @@ setTimeout(() => {
 }, 100);
 
 window.addToCar = addToCar;
-// window.adder = adder;
-// window.minuser = minuser;
+window.adder = adder;
+window.minuser = minuser;
 
 window.shopcar = {};
