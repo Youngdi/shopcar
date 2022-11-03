@@ -4,13 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>123</title>
     <style>
-        ul,
-        li {
-            margin: 0;
-            padding: 0;
-        }
-
-        .counter li {
+        .counterBtn li {
             float: left;
             list-style-type: none;
             width: 30px;
@@ -21,7 +15,7 @@
             background-color: #fff
         }
 
-        .counter li input {
+        .counterBtn li input {
             font-size: 20px;
             width: 100%;
             height: 100%;
@@ -34,57 +28,33 @@
             border-radius: 0;
         }
 
-        #countnum {
-            border-left: hidden;
-            border-right: hidden;
-            color: #666
+        .addToCarBtn {
+            font-size: 20px;
+            border: 0;
+            background-color: #F2B704;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
         }
 
-        html,
-        body,
-        ul,
-        p {
-            margin: 0;
-            padding: 0;
-        }
-
-        ul,
-        li {
-            list-style: none;
-        }
-
-        ul {
-            width: 450px;
-        }
-
-        li {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .sum {
-            width: 450px;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        #container {
-            width: 450px;
-            margin: 100px auto;
+        .addToCarBtn:hover {
+            color: #F2B704;
+            background-color: #fff;
+            border: 2px #F2B704 solid;
         }
     </style>
 </head>
 
 <body>
-    售價<p id="price">100</p>
-    總計<p id="total"></p>
-    <ul class="counter">
+    售價<p id="itemPrice">100</p>
+    總計<p id="itemTotal">0</p>
+    <ul class="counterBtn">
         <li id="plus"><input type="button" onclick="adder(this)" value="+" /></li>
         <li id="countCar">0</li>
         <li id="minus"><input type="button" onclick="minuser(this)" value="-" /></li>
     </ul>
     <br><br><br>
-    <p><button onclick="addToCar()">加入購物車</button></p>
+    <p><button class="addToCarBtn" onclick="addToCar()">加入購物車</button></p>
 
     <script>
         function adder() {
@@ -102,14 +72,14 @@
             document.getElementById("countCar").innerHTML = count;
         }
         function addToCar() {
-            // console.log(document.getElementById('price').innerText); // 售價
+            // console.log(document.getElementById('itemPrice').innerText); // 售價
             // console.log(document.getElementById('countCar').innerText);// 數量
-            // console.log(document.getElementById('total').innerText); // 小計
+            // console.log(document.getElementById('itemTotal').innerText); // 小計
 
-            var p = document.getElementById('price').innerText;
-            var q = document.getElementById('countCar').innerText;
-            var subTotal = parseInt(p) * parseInt(q);
-            document.getElementById('total').innerText = subTotal;
+            var itemPrice = document.getElementById('itemPrice').innerText;
+            var countCar = document.getElementById('countCar').innerText;
+            var subTotal = parseInt(itemPrice) * parseInt(countCar);
+            document.getElementById('itemTotal').innerText = subTotal;
         }
     </script>
 </body>
