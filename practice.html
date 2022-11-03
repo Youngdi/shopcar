@@ -102,12 +102,12 @@
             document.getElementById("countCar").innerHTML = count;
         }
         function addToCar() {
-            console.log(document.getElementById('price').innerText); // 售價
-            console.log(document.getElementById('countCar').value);  // 數量
-            console.log(document.getElementById('total').innerText); // 小計
-            
+            // console.log(document.getElementById('price').innerText); // 售價
+            // console.log(document.getElementById('countCar').innerText);// 數量
+            // console.log(document.getElementById('total').innerText); // 小計
+
             var p = document.getElementById('price').innerText;
-            var q = document.getElementById('countCar').value;
+            var q = document.getElementById('countCar').innerText;
             var subTotal = parseInt(p) * parseInt(q);
             document.getElementById('total').innerText = subTotal;
         }
