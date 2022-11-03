@@ -4,7 +4,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>123</title>
     
-
+    <script>
+        function adder() {
+            var count = document.getElementById("countCar").innerHTML;
+            count = parseInt(count) + 1;
+            document.getElementById("countCar").innerHTML = count;
+        }
+        function minuser() {
+            var count = document.getElementById("countCar").innerHTML;
+            if (count <= 0) {
+                count = 0;
+            } else {
+                count = parseInt(count) - 1;
+            }
+            document.getElementById("countCar").innerHTML = count;
+        }
+    </script>
 
     <style>
         ul,
@@ -42,46 +57,49 @@
             border-right: hidden;
             color: #666
         }
+
+        html,
+        body,
+        ul,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        ul {
+            width: 450px;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .sum {
+            width: 450px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #container {
+            width: 450px;
+            margin: 100px auto;
+        }
     </style>
 </head>
 
 <body>
-    售價<p id="price">100</p>
-    總計<p id="total">0</p>
+    
     <ul class="counter">
-        <li id="plus"><input type="button" onclick="adder()" value="+" /></li>
+        <li id="plus"><input type="button" onclick="adder(this)" value="+" /></li>
         <li id="countCar">0</li>
-        <li id="minus"><input type="button" onclick="minuser()" value="-" /></li>
+        <li id="minus"><input type="button" onclick="minuser(this)" value="-" /></li>
     </ul>
-    <br><br><br><br>
-    <button onclick="apple()">加入購物車</button>
-
-    <script>
-        function adder() {
-            var count = document.getElementById("countCar").innerHTML;
-            count = parseInt(count) + 1;
-            document.getElementById("countCar").innerHTML = count;
-        }
-        function minuser() {
-            var count = document.getElementById("countCar").innerHTML;
-            if (count <= 0) {
-                count = 0;
-            } else {
-                count = parseInt(count) - 1;
-            }
-            document.getElementById("countCar").innerHTML = count;
-        }
-        function apple() {
-            console.log(document.getElementById('price').innerText); // 售價
-            console.log(document.getElementById('countCar').value);  // 數量
-            console.log(document.getElementById('total').innerText); // 小計
-
-                var p = document.getElementById('price').innerText;
-                var q = document.getElementById('countCar').value;
-                var subTotal = parseInt(p) * parseInt(q);
-                document.getElementById('total').innerText = subTotal;
-            }
-    </script>
 </body>
 
 </html>
